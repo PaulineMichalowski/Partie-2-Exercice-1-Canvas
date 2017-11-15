@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Exercice 1</title>
+</head>
+<body>
+  <canvas id="mon_canvas" width="400" height="400">
+    Texte alternatif pour les navigateurs ne supportant pas Canvas.
+  </canvas>
+  <script type="text/javascript">
+  var c = document.getElementById("mon_canvas");
+  var ctx = c.getContext("2d");
+  //Cône
+  ctx.beginPath();
+  ctx.moveTo(200,350);
+  ctx.lineTo(260,200);
+  ctx.lineTo(150,200);
+  ctx.closePath();
+  ctx.fillStyle = "#aa6522";
+  ctx.fill();
+  //Glace
+  ctx.beginPath();
+  ctx.lineWidth="3";
+  ctx.strokeStyle="#8a0908";
+  ctx.fillStyle = "#8a0908";
+  ctx.moveTo(150,200);
+  ctx.quadraticCurveTo(220,80,257,200);
+  ctx.lineTo(150,200);
+  ctx.fill();
+  ctx.stroke();
+  </script>
+</body>
+</html>
